@@ -24,7 +24,7 @@ public class KafkaConsumer {
     @Autowired
     private EventHandlerManager eventHandlerMapping;
 
-    @KafkaListener(topics = "${spring.kafka.topics.snc-service-topic}", containerFactory = "eventKafkaListenerContainerFactory")
+    @KafkaListener(topics = "${spring.kafka.topics.snc-consumer-topic}", containerFactory = "eventKafkaListenerContainerFactory")
     public void receive(KafkaMessage message) {
         LOGGER.info("[traceId = {}]Received message ='{}'", message.toString(), message.getHeaders().get(Headers.X_TRACE_ID));
         setMessage(message);

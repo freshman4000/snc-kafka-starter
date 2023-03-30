@@ -43,6 +43,7 @@ dependencies {
 
 publishing {
     repositories {
+        mavenLocal()
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/freshman4000/my-registry")

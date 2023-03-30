@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MessageService.class);
-    @Value("${spring.kafka.topics.snc-gw-topic}")
+    @Value("${spring.kafka.topics.snc-producer-topic}")
     private String topic;
     @Autowired
     private KafkaTemplate<String, KafkaMessage> kafkaTemplate;
